@@ -75,16 +75,16 @@
         function pop_AKLKabupatenNganjuk_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Luas Area (Ha)</th>\
-                        <td>' + (feature.properties['Luas Area'] !== null ? autolinker.link(feature.properties['Luas Area'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Klasifikasi Pengembangan</th>\
                         <td>' + (feature.properties['Class'] !== null ? autolinker.link(feature.properties['Class'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Kelas Kemampuan Lahan</th>\
                         <td>' + (feature.properties['ClassKemam'] !== null ? autolinker.link(feature.properties['ClassKemam'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                  <tr>\
+                        <th scope="row">Luas Area (Ha)</th>\
+                        <td>' + (feature.properties['Luas Area'] !== null ? autolinker.link(feature.properties['Luas Area'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
